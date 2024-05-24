@@ -5,6 +5,17 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/ConfigServer" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Desktop/HocTap/HocKi1 Nam 4 (2023 - 2024)/www/Grade/gradle-8.3" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/ConfigServer" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/OrderService" />
         <option name="gradleHome" value="$PROJECT_DIR$/../Desktop/HocTap/HocKi1 Nam 4 (2023 - 2024)/www/Grade/gradle-8.3" />
         <option name="gradleJvm" value="#JAVA_HOME" />
