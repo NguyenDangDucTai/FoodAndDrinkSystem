@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/api")
 public class ProductController {
 
     @Autowired
@@ -58,7 +58,7 @@ public class ProductController {
 //        return productService.updateProduct(product);
 //    }
 
-    @DeleteMapping ("/products")
+    @DeleteMapping ("/products/{productId}")
     @Cacheable(value = "product")
     public void deleteProduct(@PathVariable(value = "productId") long productId) {
         productService.deleteProductById(productId);

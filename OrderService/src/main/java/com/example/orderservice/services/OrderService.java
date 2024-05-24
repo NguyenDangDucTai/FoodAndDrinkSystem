@@ -33,7 +33,7 @@ public class OrderService {
     public List<Order> getListOrder(){
         List<Order> orderList = orderRepository.findAll();
         for (Order o: orderList) {
-            User user = restTemplate.getForObject("http://localhost:8082/users/"+o.getId(), User.class);
+            User user = restTemplate.getForObject("http://localhost:8082/api/users/"+o.getId(), User.class);
             o.setUser(user);
         }
         return orderList;
@@ -41,7 +41,7 @@ public class OrderService {
 
     public Order getOrderById(long id){
         Order order = orderRepository.findById(id).get();
-        User user = restTemplate.getForObject("http://localhost:8082/users/"+id, User.class);
+        User user = restTemplate.getForObject("http://localhost:8082/api/users/"+id, User.class);
         order.setUser(user);
         return order;
     }
