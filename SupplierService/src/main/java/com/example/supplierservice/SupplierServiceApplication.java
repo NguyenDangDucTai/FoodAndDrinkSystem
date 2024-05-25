@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableJpaAuditing
-public class SupplierServiceApplication {
+public class    SupplierServiceApplication {
 
     private final SupplierRepository supplierRepository;
     private final Faker faker = new Faker();
