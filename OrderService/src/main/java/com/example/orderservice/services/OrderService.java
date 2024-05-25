@@ -13,6 +13,7 @@ import com.example.orderservice.scrum.SprintBacklog;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Iterator;
 import java.util.List;
 
 /*
@@ -51,10 +52,12 @@ public class OrderService {
 
     public void executeSprint() {
         // Thực hiện các mục tiêu trong Sprint
-        for (String item : sprintBacklog.getItems()) {
+        Iterator<String> iterator = sprintBacklog.getItems().iterator();
+        while (iterator.hasNext()) {
+            String item = iterator.next();
             System.out.println("Executing: " + item);
             // Giả lập hoàn thành công việc
-            sprintBacklog.completeItem(item);
+            iterator.remove();
         }
     }
 
