@@ -5,6 +5,17 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/ApiGateway" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Desktop/HocTap/HocKi1 Nam 4 (2023 - 2024)/www/Grade/gradle-8.3" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/ApiGateway" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/ConfigServer" />
         <option name="gradleHome" value="$PROJECT_DIR$/../Desktop/HocTap/HocKi1 Nam 4 (2023 - 2024)/www/Grade/gradle-8.3" />
         <option name="gradleJvm" value="#JAVA_HOME" />
@@ -55,6 +66,17 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/SaleService" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/SupplierService" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Desktop/HocTap/HocKi1 Nam 4 (2023 - 2024)/www/Grade/gradle-8.3" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/SupplierService" />
           </set>
         </option>
       </GradleProjectSettings>

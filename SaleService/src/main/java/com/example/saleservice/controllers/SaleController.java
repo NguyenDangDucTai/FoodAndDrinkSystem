@@ -19,18 +19,18 @@ import java.util.List;
  * @version: 1.0
  */
 @RestController
-@RequestMapping("/api/sales")
+@RequestMapping("/api/v1/sales")
 public class SaleController {
 
     @Autowired
     private SaleService saleService;
 
-    @GetMapping
+    @GetMapping("/sales")
     public List<Sale> getAllSales() {
         return saleService.getAllSales();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/sales/{id}")
     public Sale getSaleById(Long id) {
         return saleService.getSaleById(id);
     }
@@ -45,9 +45,9 @@ public class SaleController {
         return saleService.getSaleByProductId(productId);
     }
 
-    @PostMapping
-    public Sale createSale(Sale sale) {
-        return saleService.createSale(sale);
+    @PostMapping("/sales")
+    public Sale addSale(Sale sale) {
+        return saleService.addSale(sale);
     }
 
     @PutMapping("/{id}")
