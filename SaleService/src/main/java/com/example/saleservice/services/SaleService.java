@@ -47,7 +47,7 @@ public class SaleService {
     }
 
     @Cacheable(value = "sales")
-    public Sale createSale(Sale sale) {
+    public Sale addSale(Sale sale) {
         return saleRepository.save(sale);
     }
 

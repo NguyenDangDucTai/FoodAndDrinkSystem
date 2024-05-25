@@ -20,7 +20,7 @@ import java.util.List;
  * @version: 1.0
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/v1/orders")
 public class OrderControllers {
 
     @Autowired
@@ -44,10 +44,10 @@ public class OrderControllers {
         return orderService.addOrder(order);
     }
 
-    @DeleteMapping("/orders/{orderId}")
+    @DeleteMapping("/orders/{id}")
     @Cacheable(value = "order")
-    public void deleteOrder(@PathVariable(value = "orderId") long orderId){
-        orderService.deleteOrderById(orderId);
+    public void deleteOrder(@PathVariable(value = "id") long id){
+        orderService.deleteOrderById(id);
     }
 
 
