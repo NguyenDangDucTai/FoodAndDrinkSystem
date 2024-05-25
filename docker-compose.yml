@@ -46,46 +46,46 @@ services:
       discovery-service:
         condition: service_healthy
 
-#  order-service:
-#    image: order-service:v1.0
-#    ports:
-#      - "8082:8082"
-#    environment:
-#      - DB_HOST=mariadb
-#      - DB_PASSWORD=sapassword
-#    depends_on:
-#      discovery-service:
-#        condition: service_healthy
-#
-#  product-service:
-#    image: product-service:v1.0
-#    ports:
-#      - "8085:8085"
-#    environment:
-#      - DB_HOST=mariadb
-#      - DB_PASSWORD=sapassword
-#    depends_on:
-#      discovery-service:
-#        condition: service_healthy
-#
-#  supplier-service:
-#    image: supplier-service:v1.0
-#    ports:
-#      - "8083:8083"
-#    environment:
-#      - DB_HOST=mariadb
-#      - DB_PASSWORD=sapassword
-#    depends_on:
-#      discovery-service:
-#        condition: service_healthy
-#
-#  user-service:
-#    image: user_service:v1.0
-#    ports:
-#      - "8087:8087"
-#    environment:
-#      - DB_HOST=mariadb
-#      - DB_PASSWORD=sapassword
-#    depends_on:
-#      discovery-service:
-#        condition: service_healthy
+  order-service:
+    image: order-service:v1.0
+    ports:
+      - "8082:8082"
+    environment:
+      - DB_HOST=mariadb
+      - DB_PASSWORD=12345678
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+
+  product-service:
+    image: product-service:v1.0
+    ports:
+      - "8085:8085"
+    environment:
+      - DB_HOST=mariadb
+      - DB_PASSWORD=12345678
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+
+  supplier-service:
+    image: supplier-service:v1.0
+    ports:
+      - "8083:8083"
+    environment:
+      - DB_HOST=mariadb
+      - DB_PASSWORD=12345678
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+
+  user-service:
+    image: user-service:v1.0
+    ports:
+      - "8087:8087"
+    environment:
+      - DB_HOST=mariadb
+      - DB_PASSWORD=12345678
+    depends_on:
+      discovery-service:
+        condition: service_healthy
