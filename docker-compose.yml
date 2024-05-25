@@ -1,0 +1,91 @@
+services:
+  mariadb:
+    image: mariadb:11.1
+    restart: always
+    environment:
+      - MARIADB_ROOT_PASSWORD=12345678
+    ports:
+      - '3306:3306'
+
+  redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - '6379:6379'
+
+  discovery-service:
+    image: discovery-service:v1.0
+    ports:
+      - "8761:8761"
+    healthcheck:
+      test: ["CMD-SHELL", " netstat -an | grep -q 8761"]
+
+
+  api-gateway:
+    image: apigateway-service:v1.0
+    ports:
+      - "8080:8080"
+    depends_on:
+      discovery_service:
+        condition: service_healthy
+
+
+  config-server:
+    image: config-service:v1.0
+    ports:
+      - "9999:9999"
+
+  login-service:
+    image: login-service:v1.0
+    ports:
+      - "8181:8181"
+    environment:
+      - DB_HOST=mariadb
+      - DB_PASSWORD=12345678
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+
+#  order-service:
+#    image: order-service:v1.0
+#    ports:
+#      - "8082:8082"
+#    environment:
+#      - DB_HOST=mariadb
+#      - DB_PASSWORD=sapassword
+#    depends_on:
+#      discovery-service:
+#        condition: service_healthy
+#
+#  product-service:
+#    image: product-service:v1.0
+#    ports:
+#      - "8085:8085"
+#    environment:
+#      - DB_HOST=mariadb
+#      - DB_PASSWORD=sapassword
+#    depends_on:
+#      discovery-service:
+#        condition: service_healthy
+#
+#  supplier-service:
+#    image: supplier-service:v1.0
+#    ports:
+#      - "8083:8083"
+#    environment:
+#      - DB_HOST=mariadb
+#      - DB_PASSWORD=sapassword
+#    depends_on:
+#      discovery-service:
+#        condition: service_healthy
+#
+#  user-service:
+#    image: user_service:v1.0
+#    ports:
+#      - "8087:8087"
+#    environment:
+#      - DB_HOST=mariadb
+#      - DB_PASSWORD=sapassword
+#    depends_on:
+#      discovery-service:
+#        condition: service_healthy
