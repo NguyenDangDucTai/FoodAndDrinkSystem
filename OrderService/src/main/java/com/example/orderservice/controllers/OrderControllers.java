@@ -26,27 +26,33 @@ public class OrderControllers {
     @Autowired
     private OrderService orderService;
 
-    @GetMapping("/orders")
-    @Cacheable(value = "orders")
-    public List<Order> getListOrder(){
+
+    // Áp dụng Agile-Scrum
+    @GetMapping("/start-sprint")
+    public String startSprint() {
+        orderService.planSprint();
+        orderService.executeSprint();
+        return "Sprint started and executed";
+    }
+
+
+    @GetMapping
+    public List<Order> getAllOrders() {
         return orderService.getListOrder();
     }
 
-    @GetMapping("/orders/{id}")
-    @Cacheable(value = "order", key = "#id")
-    public Order getUserById(@PathVariable(value = "id") long id){
+    @GetMapping("/{id}")
+    public Order getOrderById(@PathVariable Long id) {
         return orderService.getOrderById(id);
     }
 
-    @PostMapping("/orders")
-    @Cacheable(value = "order", key = "#result.id")
-    public Order addOrder(@RequestBody Order order){
+    @PostMapping
+    public Order createOrder(@RequestBody Order order) {
         return orderService.addOrder(order);
     }
 
-    @DeleteMapping("/orders/{id}")
-    @Cacheable(value = "order")
-    public void deleteOrder(@PathVariable(value = "id") long id){
+    @DeleteMapping("/{id}")
+    public void deleteOrder(@PathVariable Long id) {
         orderService.deleteOrderById(id);
     }
 

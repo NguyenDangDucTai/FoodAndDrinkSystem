@@ -8,9 +8,12 @@ package com.example.orderservice.services;
 import com.example.orderservice.models.Order;
 import com.example.orderservice.models.User;
 import com.example.orderservice.repositories.OrderRepository;
+import com.example.orderservice.scrum.ProductBacklog;
+import com.example.orderservice.scrum.SprintBacklog;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Iterator;
 import java.util.List;
 
 /*
@@ -24,10 +27,38 @@ public class OrderService {
 
     private final OrderRepository orderRepository;
     private final RestTemplate restTemplate;
+    private final ProductBacklog productBacklog = new ProductBacklog();
+    private final SprintBacklog sprintBacklog = new SprintBacklog();
 
+
+    // Áp dụng Agile-Scrum
     public OrderService(OrderRepository orderRepository, RestTemplate restTemplate) {
         this.orderRepository = orderRepository;
         this.restTemplate = restTemplate;
+        // Giả sử thêm một số mục vào Product Backlog
+        productBacklog.addItem("Create new order");
+        productBacklog.addItem("Update order");
+        productBacklog.addItem("Delete order");
+        productBacklog.addItem("Get all orders");
+        productBacklog.addItem("Get order by ID");
+    }
+
+    public void planSprint() {
+        // Lấy các mục tiêu từ Product Backlog cho Sprint đầu tiên
+        sprintBacklog.addItem(productBacklog.getItems().get(0)); // Create new order
+        sprintBacklog.addItem(productBacklog.getItems().get(1)); // Update order
+        sprintBacklog.addItem(productBacklog.getItems().get(2)); // Delete order
+    }
+
+    public void executeSprint() {
+        // Thực hiện các mục tiêu trong Sprint
+        Iterator<String> iterator = sprintBacklog.getItems().iterator();
+        while (iterator.hasNext()) {
+            String item = iterator.next();
+            System.out.println("Executing: " + item);
+            // Giả lập hoàn thành công việc
+            iterator.remove();
+        }
     }
 
     public List<Order> getListOrder(){
