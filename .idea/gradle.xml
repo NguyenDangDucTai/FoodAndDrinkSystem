@@ -6,7 +6,7 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/ApiGateway" />
-        <option name="gradleHome" value="$PROJECT_DIR$/../Desktop/HocTap/HocKi1 Nam 4 (2023 - 2024)/www/Grade/gradle-8.3" />
+        <option name="gradleHome" value="C:/gradle-8.2.1" />
         <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
@@ -77,7 +77,7 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/UserService" />
-        <option name="gradleHome" value="$PROJECT_DIR$/../Desktop/HocTap/HocKi1 Nam 4 (2023 - 2024)/www/Grade/gradle-8.3" />
+        <option name="gradleHome" value="C:/gradle-8.2.1" />
         <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
