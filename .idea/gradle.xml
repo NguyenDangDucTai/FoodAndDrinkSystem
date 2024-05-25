@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/ConfigServer" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Desktop/HocTap/HocKi1 Nam 4 (2023 - 2024)/www/Grade/gradle-8.3" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/ConfigServer" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/DiscoveryService" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Desktop/HocTap/HocKi1 Nam 4 (2023 - 2024)/www/Grade/gradle-8.3" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/DiscoveryService" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/OrderService" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Desktop/HocTap/HocKi1 Nam 4 (2023 - 2024)/www/Grade/gradle-8.3" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/OrderService" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/ProductService" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Desktop/HocTap/HocKi1 Nam 4 (2023 - 2024)/www/Grade/gradle-8.3" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/ProductService" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/SaleService" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Desktop/HocTap/HocKi1 Nam 4 (2023 - 2024)/www/Grade/gradle-8.3" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/SaleService" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
