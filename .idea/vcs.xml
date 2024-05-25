@@ -10,6 +10,5 @@
     <mapping directory="$PROJECT_DIR$/SaleService" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/SupplierService" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/UserService" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/demo" vcs="Git" />
   </component>
 </project>
