@@ -27,40 +27,39 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @GetMapping("/products")
+    @GetMapping
     @Cacheable(value = "products")
     public List<Product> getAllProduct() {
         return productService.getAllProduct();
     }
 
-    @GetMapping("/products/{id}")
+    @GetMapping("/{id}")
     @Cacheable(value = "product", key = "#id")
     public Product getProductById(@PathVariable long id) {
         return productService.getProductById(id);
     }
 
-    @GetMapping("/products/category/{category}")
+    @GetMapping("/category/{category}")
     @Cacheable(value = "products", key = "#category")
-    public List<Product> getProductByCategory(String category) {
+    public List<Product> getProductByCategory(@PathVariable String category) {
         return productService.getProductByCategory(category);
     }
 
-    @PostMapping("/products")
+    @PostMapping
     @Cacheable(value = "product", key = "#result.id")
     public Product addProduct(@RequestBody Product product) {
         return productService.addProduct(product);
     }
 
+    @PutMapping
+    @Cacheable(value = "product", key = "#result.id")
+    public Product updateProduct(@RequestBody Product product) {
+        return productService.updateProduct(product);
+    }
 
-//    @PostMapping("/products")
-//    @Cacheable(value = "product", key = "#result.id")
-//    public Product updateProduct(@RequestBody Product product) {
-//        return productService.updateProduct(product);
-//    }
-
-    @DeleteMapping ("/products/{productId}")
+    @DeleteMapping("/{productId}")
     @Cacheable(value = "product")
-    public void deleteProduct(@PathVariable(value = "productId") long productId) {
+    public void deleteProduct(@PathVariable long productId) {
         productService.deleteProductById(productId);
     }
 
