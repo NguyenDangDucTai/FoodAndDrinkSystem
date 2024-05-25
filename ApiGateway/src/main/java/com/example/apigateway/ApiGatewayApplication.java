@@ -17,5 +17,5 @@ public class ApiGatewayApplication {
 	@Bean
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
-	}
+	}a
 }
