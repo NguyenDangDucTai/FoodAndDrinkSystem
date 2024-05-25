@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/FoodAndDrinkSystem.iml" filepath="$PROJECT_DIR$/.idea/FoodAndDrinkSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/OrderService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/OrderService.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProductService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ProductService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SaleService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/SaleService.main.iml" />
     </modules>
   </component>
 </project>
