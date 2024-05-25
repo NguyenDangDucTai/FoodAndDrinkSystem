@@ -1,13 +1,12 @@
-FROM gradle:8.2.0-jdk17-alpine AS build
-COPY --chown=gradle:gradle . /home/gradle/src
-WORKDIR /home/gradle/src
-RUN gradle build --no-daemon -x test
-
+# Sử dụng hình ảnh OpenJDK 17 trên Alpine Linux làm hình ảnh cơ sở cho ứng dụng triển khai
 FROM openjdk:17-alpine
 
-RUN mkdir /app
+WORKDIR /config-service
 
-COPY --from=build /home/gradle/src/build/libs/*.jar /app/spring-boot-application.jar
+CMD ["./gradlew", "clean", "bootJar"]
 
-ENTRYPOINT ["java","-jar","/app/spring-boot-application.jar"]
+COPY build/libs/*.jar app.jar
 
+EXPOSE 9999
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
