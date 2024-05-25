@@ -14,11 +14,7 @@ spring:
   cloud:
     gateway:
       routes:
-#        - id: AuthService
-#          uri: ${service.auth.uri}
-#          predicates:
-#            - Path=/api/v1/auth/**
-#
+
          - id: ProductService
            uri: ${service.product.uri}
            predicates:
@@ -51,6 +47,12 @@ spring:
            uri: ${service.supplier.uri}
            predicates:
              - Path=/api/v1/suppliers/**
+           filters:
+             AuthenticationFilter
+         - id: LoginService
+           uri: ${service.login.uri}
+           predicates:
+             - Path=/api/v1/login/**
            filters:
              - AuthenticationFilter
 
